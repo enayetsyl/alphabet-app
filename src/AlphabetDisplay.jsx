@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Navbar from './Navbar';
 
 const AlphabetDisplay = () => {
   const [letter, setLetter] = useState('');
@@ -46,12 +47,14 @@ const AlphabetDisplay = () => {
   };
 
   return (
-    <div
+   <>
+   <Navbar/>
+   <div
       style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '40px',
+        marginTop: '0px',
         padding: '0 16px',
       }}
     >
@@ -62,7 +65,7 @@ const AlphabetDisplay = () => {
           width: '80%',
           maxWidth: '300px',
           height: '80vw',
-          maxHeight: '300px',
+          maxHeight: '250px',
           backgroundColor: '#e5e7eb',
           display: 'flex',
           alignItems: 'center',
@@ -74,7 +77,7 @@ const AlphabetDisplay = () => {
           <img
             src={`/${isCapsLock ? 'image-capital' : 'image-small'}/${isCapsLock ? letter.toUpperCase() : letter}.jpg`}
             alt={`Letter ${isCapsLock ? letter.toUpperCase() : letter}`}
-            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fill' }}
           />
         )}
       </div>
@@ -119,6 +122,7 @@ const AlphabetDisplay = () => {
 
       <audio id="letterSound"></audio>
     </div>
+   </>
   );
 };
 
