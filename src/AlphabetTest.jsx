@@ -86,7 +86,7 @@ const AlphabetTest = () => {
   return (
     <>
       <Navbar />
-      <div style={{ textAlign: "center", marginTop: "-60px" }}>
+      <div style={{ textAlign: "center", marginTop: "60px" }}>
         <h1>Pronounce the Letter</h1>
 
         <div style={{ fontSize: "100px", fontWeight: "bold", margin: "20px" }}>{letter}</div>
